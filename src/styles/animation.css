@@ -1,0 +1,81 @@
+   .cursor {
+            color: #333;
+            animation: blink 0.7s infinite;
+        }
+      .typed-cursor {
+    color: #2958cd;  /* Altere para a cor que preferir */
+    animation: blink 0.7s infinite;
+}
+
+/* Isolando o CSS para não interferir em outros componentes */
+  .skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+  }
+
+  .skill-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .skill-wrapper {
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+
+  /* Barra de Progresso Circular */
+  .progress-circle {
+    stroke-width: 3;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 2s ease-out;
+  }
+
+  /* Cores das barras */
+  .trab-equipe {
+    stroke: #4ade80; /* Verde */
+  }
+
+  .comunicacao {
+    stroke: #3b82f6; /* Azul */
+  }
+
+  .criatividade {
+    stroke: #f59e0b; /* Amarelo */
+  }
+
+  .lideranca {
+    stroke: #ef4444; /* Vermelho */
+  }
+
+  /* Texto dentro do círculo */
+  .skill-name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 12px;
+
+  }
+
+  .skill-name {
+    color: #2958cd;
+  }
+  /* Tamanho Responsivo */
+  @media (max-width: 768px) {
+    .skills-container {
+      flex-direction: column;
+    }
+  }

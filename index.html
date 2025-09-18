@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <!--links css favicon-->
+    <link rel="stylesheet" href="src/styles/styele.css">
+    <link rel="stylesheet" href="src/styles/animation.css">
+    <link rel="shortcut icon" href="src/img/codecraft.png" type="image/x-icon">
+
+    <!--links font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--links font aweseom-->
+
+    <!--links Animação AO-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <!--links Animação AO-->
+
+
+    <script src="src/js/head.js"></script>
+    <title>Samuel.Dev</title>
+</head>
+
+<body class="overflow-x-hidden">
+
+    <!--- 00 Navbar desenvolvida com taylwind e flowbise-->
+    <nav class="fixed top-0 w-full z-50 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-600 shadow">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="src/img/logo.png" class="h-12 hidden md:block " alt="Logo">
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Dev</span>
+            </a>
+            <div class="flex md:order-2 space-x-3 md:space-x-1 rtl:space-x-reverse">
+                <button type="button"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    <a href="#Contactos">Contactar</a>
+
+                </button>
+                <!--ICONE DE BOTÃO AO CLICAR -->
+                <button id="theme-toggle" type="button"
+                    class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                            fill-rule="evenodd" clip-rule="evenodd">
+                        </path>
+                    </svg>
+                </button>
+                <button data-collapse-toggle="navbar-sticky" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-sticky" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+                <!-- em cima ICONE DE BOTÃO AO CLICAR -->
+
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                <ul
+                    class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li>
+                        <a href="#Home"
+                            class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                            aria-current="page">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Habilidades"
+                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                            Habilidades
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Portifólio"
+                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                            Portifólio</a>
+                    </li>
+                    <li>
+                        <a href="#Sobre"
+                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                            Sobre</a>
+                    </li>
+                    <li>
+                        <a href="#Atividades"
+                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                            Atividades
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--- 00Termina aqui a navbar-->
+
+    <!--- 01 HOME-->
+    <section id="Home" class="bg-white dark:bg-gray-900">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12 mt-4 ">
+            <a href="#"
+                class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 mt-6 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
+                role="alert">
+
+
+                <span class="text-sm font-medium p-1 ">Venha me Conhecer <i
+                        class="fa-solid fa-thumbs-up px-4  py-1 text-ml"></i></span>
+                <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </a>
+            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
+                data-aos="fade-down" data-aos-duration="1000">
+                Samuel Afonso
+                <br>
+
+                <span class="text-blue-700 dark:text-blue-500" id="typed-output"></span>
+
+
+            </h1>
+            <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
+                Eu sou desenvolvedor front-end apaixonado
+                por tecnologia e aprendizado contínuo. Trabalho com HTML, CSS, JavaScript,Tailwind, com
+                intuíto de
+                aprender novas tecnologias.
+            </p>
+            <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+                <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center 
+                text-gray-900 dark:text-white rounded-lg 
+                bg-primary-700 hover:bg-primary-800 
+                focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+                    Acesse
+                    <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+                <a href="src/docs/pdf/cv2.pdf " target="_blank"
+                    class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+
+                    Donwloder CV
+                </a>
+            </div>
+
+            <!--- aperfeiçoadno
+            <div class="px-4 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-36">
+                <span class="font-semibold text-gray-400">Aperfeiçoando ainda mais!!!</span>
+                <div class="flex flex-wrap justify-center items-center mt-8 text-gray-500 sm:justify-between"
+                    data-aos="fade-up" data-aos-duration="1000">
+                    <a href="#"
+                        class="text-3xl font-bold mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400  ">
+                        <i class="fa-solid fa-database text-blue-500"></i>
+                        Backend
+
+                    </a>
+                    <a href="#"
+                        class="text-3xl font-bold mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400">
+                        <i class="fa-solid fa-mobile-alt text-gray-600"></i>
+                        ssss
+                    </a>
+                    <a href="#"
+                        class="text-3xl font-bold mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400 ">
+                        <i class="fa-brands fa-figma text-red-500"></i>
+                  UI/UX Design
+
+                    </a>
+                </div>
+            </div>-->
+            <!--DIV DE MINHA SOFT SKILL-->
+
+
+
+        </div>
+
+        <!-- FIM DIV DE MINHA SOFT SKILL-->
+
+        </div>
+    </section>
+    <!--- 01 Termina aqui Estrutura da primeria section depois da NAVBAR-->
+
+    <!---02 Segunda section de conteudo com imagens -->
+
+    <section class="bg-white dark:bg-gray-900" id="Sobre">
+        <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6"
+            data-aos="fade-up" data-aos-duration="1000">
+            <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Sobre Mim</h2>
+                <p class="mb-4">Sou estudante de Tecnologias de Informação, focado em programação e redes. Tenho
+                    experiência em HTML, CSS, JavaScript, Tailwind e Bootstrap,Mysql e PhP, além de bases em Python.
+                    Estou a evoluir para React.js e Next.js.
+                    Simples, calmo e colaborativo, valorizo aprendizado contínuo e trabalho em equipa para gerar impacto
+                    positivo..</p>
+                <p> Redes
+                <p>
+                <p class="flex gap-4 ">
+                    <a href="#" class="text-purple-600 dark:text-white "><i class="fa-brands fa-github"></i>Github</a>
+                    <a href="#" class="text-blue-600 dark:text-white"><i class="fa-brands fa-facebook"></i>Facebook</a>
+                    <a href="#" class="text-blue-800 dark:text-white"><i class="fa-brands fa-linkedin"></i>Linkdin</a>
+                    <a href="#" class="text-orange-600 dark:text-white"><i
+                            class="fa-brands fa-instagram"></i>Instagram</a>
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-4 mt-8  ">
+                <img class="w-full rounded-lg " src="src/img/about.png" alt="portifolioSamuel">
+                <img class="mt-4 w-full lg:mt-10 rounded-lg" src="src/img/perfilUndrawSemfundo.png"
+                    lt="office content 2">
+            </div>
+
+        </div>
+    </section>
+    <!--- 02 Segunda section de conteudo com imagens -->
+
+    <!--- 03 Terceira section de conteudo onde vai SKILL -->
+
+    <section class="bg-white dark:bg-gray-900 " id="Habilidades">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+            <div class="max-w-screen-md mb-8 lg:mb-16" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Habilidades</h2>
+                <p class="text-gray-500 sm:text-xl dark:text-gray-400">Acredito que as habilidades técnicas devem estar
+                    sempre em evolução, por isso busco constantemente aprender
+                    novas ferramentas que me permitam criar soluções eficientes.</p>
+            </div>
+            <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
+                <div data-aos="fade-up" data-aos-duration="1000">
+                    <div
+                        class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
+                        <img src="src/icon/html.png" alt="">
+                    </div>
+                    <h3 class="mb-2 text-xl font-bold dark:text-white">HTML</h3>
+                    <p class="text-gray-500 dark:text-gray-400">
+                        Tenho domínio avançado em HTML,conhecimento que me ajudam a desenvolver páginas organizadas,
+                        aplicando boas práticas e criando estruturas sólidas e responsivas.
+                    </p>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000">
+                    <div
+                        class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
+                        <img src="src/icon/css.png" alt="" style="height: 50px;width: 50px;">
+                    </div>
+                    <h3 class="mb-2 text-xl font-bold dark:text-white">CSS</h3>
+                    <p class="text-gray-500 dark:text-gray-400">
+                        Possuo domínio em CSS, desenvolvendo interfaces modernas, responsivas e atraentes,
+                        aplicando estilos consistentes, boas práticas e foco em usabilidade.
+                    </p>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000">
+                    <div
+                        class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
+                        <img src="src/icon/tailwindcss.png" alt="">
+                    </div>
+                    <h3 class="mb-2 text-xl font-bold dark:text-white">tailwind.css</h3>
+                    <p class="text-gray-500 dark:text-gray-400">
+                        Possuo domínio básico em Tailwind CSS, aplicando utilitários para criar layouts responsivos,
+                        consistentes, ágeis, bem organizados e com design intuítivo.
+                    </p>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000">
+                    <div
+                        class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
+                        <img src="src/icon/js1.png" alt="">
+                    </div>
+                    <h3 class="mb-2 text-xl font-bold dark:text-white">Js</h3>
+                    <p class="text-gray-500 dark:text-gray-400">
+                        Ainda codificando em JavaScript, desenvolvendo interações dinâmicas,
+                        manipulação de DOM, funções lógicas e procuro integração com frameworks modernos para projetos
+                        escaláveis.
+                    </p>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000">
+                    <div
+                        class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
+                        <img src="src/icon/python.png" alt="">
+                    </div>
+                    <h3 class="mb-2 text-xl font-bold dark:text-white">Python</h3>
+                    <p class="text-gray-500 dark:text-gray-400">
+                        Tenho conhecimento em Python, desenvolvendo scripts, lógica básica,
+                        boas práticas de código e evoluindo constantemente minhas habilidades em Flask.
+                    </p>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000">
+                    <div
+                        class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
+                        <img src="src/icon/mysql.png" alt="">
+
+                    </div>
+                    <h3 class="mb-2 text-xl font-bold dark:text-white">Mysql</h3>
+                    <p class="text-gray-500 dark:text-gray-400">
+                        Tenho conhecimento básico em MySQL, aplicando consultas, criação de tabelas, relações,
+                        rigurosidade nos dados forncendo bom desenpenho.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--- 03 Terceira section de conteudo onde vai SKILL -->
+
+    <!--- 04 Quarta section de conteudo onde vai Actvidades que participei -->
+    <section class="bg-white dark:bg-gray-900" id="Atividades">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
+            <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Actividades
+                </h2>
+                <p class="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">Estas foram algumas
+                    atividades e até algumas das formações das quais eu pude participar.</p>
+            </div>
+            <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
+                <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700"
+                    >
+                    <a href="#">
+                        <img class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="src/img/STEM.jpg"
+                            alt="Bonnie Avatar">
+                    </a>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                            <a href="#">Eu pude Participar</a>
+                        </h3>
+                        <span class="text-gray-500 dark:text-gray-400">STEM Africa</span>
+                        <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
+                            No ano de 2025 participei no campo de inovação e tecnologia da STEM Africa,
+                            tranformando ideias projectos.
+
+                        </p>
+
+                    </div>
+                </div>
+                <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700"
+                    >
+                    <a href="#">
+                        <img class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="src/img/CFITEL.jpg"
+                            alt="samuel afonso CFITEL" style="height: 200px;">
+                    </a>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                            <a href="#">Formação</a>
+                        </h3>
+                        <span class="text-gray-500 dark:text-gray-400">Andei na academia CFITEL</span>
+                        <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
+                            Num certo periodo participei numa intensa jornada de formação de programação WEB intensiva
+                            no centro a cima citado.
+                        </p>
+
+                    </div>
+                </div>
+                <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700"
+                    >
+                    <a href="#">
+                        <img class=" w-80 h-70  rounded-lg mx-auto rounded-lg sm:rounded-none sm:rounded-l-lg "
+                            src="src/img/Certificado.png" alt="Michael Avatar">
+                    </a>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                            <a href="#">RocketSeat</a>
+                        </h3>
+                        <span class="text-gray-500 dark:text-gray-400">Curso Front-end Básico</span>
+                        <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
+                            Terminei um curso de front-end na plataforma da RocketSeat.</p>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--- 04 Termina Quarta section de conteudo onde vai  Actvidades que participei -->
+
+    <!--- 05 Quinta setion Portifólio -->
+    <div class="dark:bg-gray-900 flex flex-col items-center sm:flex-row gap-6" id="Portifólio">
+        <div class="max-w-sm w-full bg-white m-4 border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 transition-colors duration-300 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer"
+        >
+            <a href="#">
+                <img class="rounded-t-lg w-full h-48 " src="src/img/gzap.png" alt="Imagem" />
+            </a>
+            <div class="p-5">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        Envio de dados para Whatsapp/E-mail
+                    </h5>
+                </a>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                    Utilizei duas(2) ferramentas que me permitiram integrar o Whatsapp e o E-mail, para envio de
+                    mensagens.
+                </p>
+                <a href="#"
+                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    interações
+                    <i class="fa-solid fa-square-arrow-up-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+        <!----->
+        <div class="max-w-sm w-full bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 transition-colors duration-300 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer"
+            >
+            <a href="#">
+                <img class="rounded-t-lg w-full h-48 object-cover" src="src/img/Captura de ecrã 2025-08-11 150920.png" alt="Imagem" />
+        
+            </a>
+            <div class="p-5">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        Landing Page Simples
+                    </h5>
+                </a>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                    Neste projecto, testei as minhas habilidades em html,css para dar inicio a integração do
+                    Tailwind.css em meus projectos.
+                </p>
+                <br>
+                <a href="#"
+                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Landing Page
+                    <i class="fa-solid fa-house ml-2"></i>
+                </a>
+            </div>
+        </div>
+        <!----->
+        <div class="max-w-sm w-full bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 transition-colors duration-300 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer"
+            >
+            <a href="#">
+                <img class="rounded-t-lg w-full h-48 object-cover" src="src/img/api.png" alt="Imagem" />
+            </a>
+            <div class="p-5">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        Projecto Consumo de API com JS
+                    </h5>
+                </a>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                    Neste Projecto eu utilizei a API da OpenWeatherMap para fornecer dados em tempo real de um
+                    determinado País
+                </p>
+                <a href="#"
+                    class="inline-flex items-center px-3  text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    <button data-popover-target="popover-default" type="button"
+                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+
+                        Detalhes.
+                    </button>
+                    <div data-popover id="popover-default" role="tooltip"
+                        class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
+                        <div
+                            class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
+                            <h3 class="font-semibold text-gray-900 dark:text-white">API Clima</h3>
+                        </div>
+                        <div class="px-3 py-2">
+                            <p>
+                                Este projeto foi desenvolvido com o objetivo de criar uma aplicação leve e minimalista
+                                que permite ao usuário visualizar rapidamente as condições climáticas da sua cidade.
+                                Diferente de apps complexos e sobrecarregados, a proposta aqui é oferecer uma
+                                experiência limpa, objetiva e sem distrações visuais.
+                            </p>
+
+                        </div>
+                        <div data-popper-arrow></div>
+                    </div>
+
+
+                </a>
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <!--- 05 Termina Quinta setion Portifólio -->
+
+    <!--- 06 Contaco Sexta setion basica -->
+    <section class="flex items-center justify-center  bg-white dark:bg-gray-900" style="height: 60vh;" id="Contactos">
+        <div class="w-full max-w-xl px-6 py-8 space-y-8">
+            <h1 class="text-3xl text-center text-white">Meus Contactos</h1>
+            <!-- Links sociais -->
+            <div class="flex flex-wrap justify-center gap-4 text-lg font-medium">
+                <a href="https://github.com/SamuelDev404" class="text-gray-500 dark:text-white dark: text-gray-500"><i
+                        class="fa-brands fa-github"></i>Github</a>
+                <a href="https://www.facebook.com/profile.php?id=61578299296058"
+                    class="text-gray-500 dark:text-white"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                <a href="#" class="text-gray-500 dark:text-white"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <div>
+
+                    <button data-popover-target="popover-user-profile" type="button"
+                        class="text-gray-500 dark:text-white ">
+                    <i class="fa-solid fa-phone"></i>+244 938 242 790
+
+                    </button>
+
+                   <!--conteudo quevai aparecer ao entrar com cursor no contact-->
+                    <div data-popover id="popover-user-profile" role="tooltip"
+                        class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 dark:text-gray-400 dark:bg-gray-800 dark:border-gray-600">
+                        <div class="p-3">
+                            <div class="flex items-center justify-between mb-2">
+                                <a href="#">
+                                    <img class="w-10 h-10 rounded-full" src="src/img/perfilUndraw.png"
+                                        alt="Samuel">
+                                </a>
+                                <div>
+                                    <button type="button"
+                                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-1.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Dev front-end</button>
+                                </div>
+                            </div>
+                            <p class="text-base font-semibold leading-none text-gray-900 dark:text-white">
+                                <a href="#">Samuel Afonso</a>
+                            </p>
+                            <p class="mb-3 text-sm font-normal">
+                                <a href="#" class="hover:underline">samuelafonso2025@gmail.com</a>
+                            </p>
+                            <p class="mb-4 text-sm">Contactos Disponiveis.<a href="#"
+                                    class="text-blue-600 dark:text-blue-500 hover:underline">938242790</a></p>
+                            <ul class="flex text-sm">
+                                <li class="me-2">
+                                    <a href="#" class="hover:underline">
+                                        <span class="font-semibold text-blue-600 dark:text-white">956759 178</span>
+                                    
+                                    </a>
+                                </li>
+                                <li>
+                                   
+                                </li>
+                            </ul>
+                        </div>
+                        <div data-popper-arrow></div>
+                    </div>
+                   <!--conteudo quevai aparecer ao entrar com cursor no contact-->
+
+
+                </div>
+
+            </div>
+
+            <!-- Input de e-mail -->
+            <div>
+                <label for="input-group-1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    Sua mensagem.
+                </label>
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                    </div>
+
+                    <textarea id="mensagem" rows="4"
+                        class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Escreva a sua mensagem aqui..."></textarea>
+                </div>
+
+                <button type="button" onclick="enviarMensagemWhatsApp()"
+                    class="flex gap-2 items-center text-white p-4 mt-4 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <p>Whatsapp</p>
+                </button>
+
+            </div>
+        </div>
+    </section>
+
+    <!--- 06 Termina Sexta setion basica -->
+
+    <!--07 FOOTER-->
+    <footer class="p-4  bg-white sm:p-6 dark:bg-gray-800">
+        <div class="mx-auto max-w-screen-xl ">
+            <div class="md:flex md:justify-between">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="flex items-center">
+                        <img src="src/img/codecraft.png" class="mr-3 h-12" alt="FlowBite Logo" />
+                        <span
+                            class="self-center text-1xl font-semibold whitespace-nowrap dark:text-white">Portifólio</span>
+                    </a>
+                </div>
+                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Estado </h2>
+                        <ul class="text-gray-600 dark:text-gray-400">
+                            <li class="mb-4">
+                                <a href="https://flowbite.com" class="hover:underline">Aberto para projectos</a>
+                            </li>
+                            <li>
+                                <a href="https://tailwindcss.com/" class="hover:underline">Disponivel para aprender</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Repositório</h2>
+                        <ul class="text-gray-600 dark:text-gray-400">
+                            <li class="mb-4">
+                                <a href="https://github.com/SamuelDev404" class="hover:underline ">Github</a>
+                            </li>
+                            <li>
+                                <i class="fab fa-git-alt"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Desenvolvido</h2>
+                        <ul class="text-gray-600 dark:text-gray-400">
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Samuel Front-end</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline">Programador &amp; UI</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">©2025 <a
+                        href="https://flowbite.com" class="hover:underline">Samuel</a> Todos direitos reservados.
+                </span>
+                <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+                    <a href="https://www.facebook.com/profile.php?id=61578299296058"
+                        class="text-gray-500 dark:text-white"><i class="fa-brands fa-facebook"></i>
+                        Facebook
+                    </a>
+
+                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                        <a href="https://github.com/SamuelDev404"
+                            class="text-gray-500 dark:text-white dark: text-gray-500"><i
+                                class="fa-brands fa-github"></i>Github</a>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--07 FOOTER-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div></div>
+
+    <!-- Typed.js via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+
+
+
+
+
+    <!--LINK JS-->
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!--animation da escita é o primeiro link-->
+
+    <script src="src/js/whatsapp.js"></script>
+    <script src="src/js/scriptForButton.js"></script>
+    <script src="src/js/animationEscrita.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <!---SCRIPT DA ANIMAÇÃO AO-->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+
+
+</body>
+
+</html>
